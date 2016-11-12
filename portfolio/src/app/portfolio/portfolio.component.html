@@ -1,0 +1,29 @@
+<div class="container-fluid" id="portfolio">
+  
+  <div class="container">
+  
+  	<div class="row">
+  
+      <div *ngFor="let item of portfolioItems" class="col-sm-6">
+        <div class="card">
+          <div class="card-block">
+            <h3 class="card-title">{{item.title}}</h3>
+            <h5 class="card-subtitle">{{item.subtitle}}</h5>
+          </div>
+          
+          <img class="img-fluid" [src]="item.imgUrl">
+  
+          <div class="card-block">
+          <h4 class="tech-text">{{item.tech_used}}</h4>
+            <p class="card-text">{{item.text}}</p>
+            <a target="_blank" [href]="item.url" class="card-link btn btn-outline-secondary">Visit</a>
+            <a target="_blank" [href]="item.sourceUrl" class="card-link btn btn-outline-secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+  
+  	</div> <!-- ./row -->
+  
+  </div> <!-- ./container -->
+
+</div> <!-- ./container-fluid -->

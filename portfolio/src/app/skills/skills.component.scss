@@ -1,0 +1,112 @@
+$color-background: #262D35;
+
+// colors for gradiant:
+$color-background-1: #0C5593;
+$color-background-2: #362D6C;
+$light-white: rgba(255,255,255, .15);
+$light-border-color: rgba(255,255,255, .50);
+
+#skills {
+	padding-top: 2rem;
+	min-height: 100vh;
+  color: white;
+
+	//background-color: lighten($color-background, 40%);
+  /* Fallback (could use .jpg/.png alternatively) */
+  background-color: $color-background-1;
+
+  /* Safari 5.1, iOS 5.0-6.1, Chrome 10-25, Android 4.0-4.3 */
+  background-image:
+    -webkit-linear-gradient(
+    	to top right, 
+    	$color-background-1, 
+    	$color-background-2
+    );
+
+  /* Firefox 3.6 - 15 */
+  background-image:
+    -moz-linear-gradient(
+    	to top right, 
+    	$color-background-1, 
+    	$color-background-2
+    );
+
+  /* Opera 11.1 - 12 */
+  background-image:
+    -o-linear-gradient(
+    	to top right, 
+    	$color-background-1, 
+    	$color-background-2
+    );
+
+  /* Opera 15+, Chrome 25+, IE 10+, Firefox 16+, Safari 6.1+, iOS 7+, Android 4.4+ */
+  background-image: 
+  	linear-gradient(
+  	  to top right,
+  	  $color-background-1,
+  	  $color-background-2
+  );
+
+  @media (min-width: 544px) {
+		padding-top: 4rem;
+	}
+
+	@media (min-width: 992px) {
+		padding-top: 5rem;
+	}
+
+	.container {
+		margin-top: 2rem;
+		
+		@media (min-width: 544px) {
+			margin-top: 3rem;
+		}
+	}
+
+  .jumbotron {
+    padding: 2rem 2rem;
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: $light-white;
+    border: 1px solid $light-border-color;
+    color: white;
+    
+    @media (min-width: 992px) {
+      margin-bottom: 4rem;
+    }
+
+    h1 {
+      color: white;
+    }
+  }
+
+	.brand-row {
+    
+		margin-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.50);
+
+		p {
+			color: #ffffff;
+		}
+			
+		.col-sm-2 {
+			// needed for image positioning:
+			display: flex;
+  		flex-direction: column;
+  		justify-content: center;
+			
+		}
+
+		img {
+  		padding-top: 15px;
+  		padding-bottom: 15px;
+		}
+	}
+
+	.jumbotron {
+		padding: 2rem 2rem;
+	}
+}
